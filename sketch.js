@@ -43,7 +43,7 @@ function draw() {
     H = 100;
   }
   
-  if (wid > 500){
+  if (wid > 1000){
     cirx = random(width);
     ciry = random(height);
     wid = 0;
