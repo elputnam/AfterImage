@@ -16,8 +16,8 @@ function setup() {
     dance.push(new Lattice());
   }
   //background(255);
- cirx = random(width);
- ciry = random(height);
+ //cirx = 0;
+ //ciry = 0;
 }
 
 function draw() {
@@ -44,8 +44,8 @@ function draw() {
   }
 
   if (wid > 1000){
-    cirx = random(width);
-    ciry = random(height);
+    //cirx = random(width);
+    //ciry = random(height);
     wid = 0;
   }
 }
@@ -54,7 +54,7 @@ class Lattice{
   constructor(){
   //this.loc = createVector(width/2,height/2);
     this.loc = createVector(width, height);
-  this.len = random(20, 60);
+    this.len = random(20, 60);
   }
 
   display(){
