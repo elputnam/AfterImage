@@ -1,5 +1,5 @@
 let dance =[];
-let num = 30;
+let num = 100;
 //let l1;
 let H = 100;
 let wid = 0;
@@ -60,7 +60,7 @@ class Lattice{
   display(){
     //lines
     strokeWeight(1);
-    fill(0, 0.2);
+    fill(H-50, random(100), random(360), 0.2);
     stroke(H, random(360), random(360));
 
     beginShape();
