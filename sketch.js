@@ -33,16 +33,16 @@ function draw() {
   dance[i].step();
   dance[i].edges();
   }
-  
+
   H += 1;
   wid += random(10);
 
-  
-  
+
+
   if (H > 300){
     H = 100;
   }
-  
+
   if (wid > 1000){
     cirx = random(width);
     ciry = random(height);
@@ -53,14 +53,14 @@ function draw() {
 class Lattice{
   constructor(){
   //this.loc = createVector(width/2,height/2);
-    this.loc = createVector(width, random(height));
+    this.loc = createVector(width, height);
   this.len = random(20, 60);
   }
 
   display(){
     //lines
     strokeWeight(1);
-    fill(H-50, random(100), random(360), 0.2);
+    //fill(H-50, random(100), random(360), 0.2);
     stroke(H, random(360), random(360));
 
     beginShape();
@@ -69,7 +69,7 @@ class Lattice{
     vertex(this.loc.x + this.len, this.loc.y + this.len);
     endShape();
   }
-  
+
   edges(){
     if (this.loc.x <= 0){
         this.loc.x += 5
@@ -84,7 +84,7 @@ class Lattice{
       this.loc.y -= 5
       }
     }
-  
+
   step(){
     let choice = floor(random(4));
     if (choice == 0){
@@ -96,8 +96,7 @@ class Lattice{
     else if (choice == 2){
         this.loc.y += random(5,10);
     } else {
-      this.loc.y -= random(5,10); 
+      this.loc.y -= random(5,10);
       }
     }
 }
-
